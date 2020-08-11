@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+    
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    
+    <div id="landing-header">
+ 		<h1>Welcome to YelpView!</h1>
+		<a href="/campgrounds" class="btn btn-lg btn-success">View More Landscape</a>
+    </div>
+    
+    <ul class="slideshow">
+      <li><img src="https://cdn.pixabay.com/photo/2020/01/16/17/21/pantheon-4771206_960_720.jpg" /></li>
+      <li><img src="https://pixabay.com/get/53e3d14a4253ad14ead98375c3213f771222dfe05a567048742c78dc.jpg" /></li>
+      <li><img src="https://pixabay.com/get/53e4d6434353ae14ead98375c3213f771222dfe05a567048742e7ed0.jpg" /></li>
+      <li><img src="https://pixabay.com/get/52e4d6454c51aa14ead98375c3213f771222dfe05a567048742e7ad1.jpg" /></li>
+      <li><img src="https://pixabay.com/get/53e0dd464355ad14ead98375c3213f771222dfe05a567048742f7fd7.jpg" /></li>
+    </ul>
+
+<% include partial/footer %>
